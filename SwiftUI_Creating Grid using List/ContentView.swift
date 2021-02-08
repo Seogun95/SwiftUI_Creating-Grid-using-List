@@ -9,8 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        List {
+            ForEach(0..<8) {  _ in 
+                HStack {
+                    ForEach(0..<2) { _ in
+                        Image("pancake")
+                            .resizable()
+                            .renderingMode(.original)
+                            .scaledToFill()
+                            .padding(5)
+                    }
+                }
+            }
+        }
     }
 }
 
